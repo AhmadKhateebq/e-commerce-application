@@ -1,0 +1,385 @@
+{
+	"info": {
+		"_postman_id": "b9ff3ecd-3e0d-40ac-88f5-32a4c1b307d1",
+		"name": "warehouse_mangment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "address",
+			"item": [
+				{
+					"name": "find",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/address/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"address",
+								"1"
+							]
+						}
+					},
+					"response": [
+   								 	"id": 1,
+								    "name": "cocacola",
+								    "type_id": 1,
+								    "quantity": 20
+								]
+				},
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/address/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"address",
+								""
+							]
+						}
+					},
+					"response": [
+								    {
+								        "id": 1,
+								        "country": "Palestine",
+								        "city": "Ramallah",
+								        "area": "BirZeit",
+								        "street": "main st"
+								    },
+								    {
+								        "id": 2,
+								        "country": "Palestine",
+								        "city": "Nablus",
+								        "area": "Rafedia",
+								        "street": "hosbital st"
+								    },
+								    {
+								        "id": 3,
+								        "country": "Palestine",
+								        "city": "Ramallah",
+								        "area": "Ramallah",
+								        "street": "Al-Ersal st"
+								    },
+								    {
+								        "id": 4,
+								        "country": "Palestine",
+								        "city": "Hebron",
+								        "area": "Hebron",
+								        "street": "main st"
+								    }
+								]
+				},
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"country\": \"Palestine\",\r\n    \"city\": \"Ramallah\",\r\n    \"area\": \"Beitunya\",\r\n    \"street\": \"main st\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/address/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"address",
+								""
+							]
+						}
+					},
+					"response": [
+									    "id": 5,
+									    "country": "Palestine",
+									    "city": "Ramallah",
+									    "area": "Beitunya",
+									    "street": "main st"
+								]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/address/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"address",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "type",
+			"item": [
+				{
+					"name": "find",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/address/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"address",
+								"1"
+							]
+						}
+					},
+					"response": [
+									"id": 1,
+    								"name": "can"
+								]
+				},
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/address/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"address",
+								""
+							]
+						}
+					},
+					"response": [
+								    {
+								        "id": 1,
+								        "name": "can"
+								    },
+								    {
+								        "id": 2,
+								        "name": "solid"
+								    },
+								    {
+								        "id": 3,
+								        "name": "package"
+								    }
+								]
+				},
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"country\": \"Palestine\",\r\n    \"city\": \"Ramallah\",\r\n    \"area\": \"Beitunya\",\r\n    \"street\": \"main st\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/address/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"address",
+								""
+							]
+						}
+					},
+					"response": [
+									"id": 4,
+    								"name": "canned"
+    							]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/type/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"type",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "item",
+			"item": [
+				{
+					"name": "find",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/address/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"address",
+								"1"
+							]
+						}
+					},
+					"response": [
+									 "id": 1,
+								    "name": "cocacola",
+								    "type_id": 1,
+								    "quantity": 20
+								]
+				},
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/address/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"address",
+								""
+							]
+						}
+					},
+					"response": [
+								    {
+								        "id": 1,
+								        "name": "cocacola",
+								        "type_id": 1,
+								        "quantity": 20
+								    },
+								    {
+								        "id": 2,
+								        "name": "doritos",
+								        "type_id": 3,
+								        "quantity": 20
+								    },
+								    {
+								        "id": 3,
+								        "name": "milk",
+								        "type_id": 3,
+								        "quantity": 20
+								    },
+								    {
+								        "id": 4,
+								        "name": "bread",
+								        "type_id": 2,
+								        "quantity": 20
+								    }
+								]
+				},
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"country\": \"Palestine\",\r\n    \"city\": \"Ramallah\",\r\n    \"area\": \"Beitunya\",\r\n    \"street\": \"main st\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/address/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"address",
+								""
+							]
+						}
+					},
+					"response": [ 
+									"id": 5,
+								    "name": "cocacola1",
+								    "type_id": 1,
+								    "quantity": 20	
+								]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/type/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"type",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
