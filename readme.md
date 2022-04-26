@@ -1,20 +1,20 @@
 # Classes:
 ## address{
-###     id,
-###     country,
-###     city,
-###     area,
-###     street
+     id,
+    country,
+     city,
+     area,
+     street
 ## }
 ## item{
-###     id,
-###     name,
-###     type_id,
-###     quantity   
+     id,
+     name,
+     type_id,
+     quantity   
 }
 ## type{
-###     id,
-###     name
+     id,
+     name
 ## }
 
 #  *HTTP Methods* :
