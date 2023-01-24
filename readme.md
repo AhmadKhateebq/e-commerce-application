@@ -1,4 +1,4 @@
-# this is my assignment for webservices , though i didnt understand the whole assignment but i did what i understand to do,
+
 # this readme contains the classes design and the documentation for the methods
 # each class has a model , repository , service and controller.
 # each controller contains 4 methods ,2 gets , post and delete, they are described in this file.
